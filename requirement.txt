@@ -1,1 +1,3 @@
-request
+requests
+argparse
+configparser
