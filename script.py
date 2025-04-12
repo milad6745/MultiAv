@@ -8,7 +8,7 @@ import configparser
 
 # Read configuration file
 config = configparser.ConfigParser()
-config.read("config.conf")
+config.read("/config.conf")
 
 # Check if script is enabled
 enabled = config.getboolean("MultiAV", "enabled", fallback=True)
@@ -31,7 +31,8 @@ parser.add_argument("working_directory", help="Directory where the file is locat
 args = parser.parse_args()
 
 # Set up logging
-log_file = os.path.join(args.working_directory, "scan_log.txt")
+log_file = os.path.join("/var/log/", "scan_log.txt")
+#log_file = os.path.join(args.working_directory, "scan_log.txt")
 logging.basicConfig(filename=log_file, level=logging.INFO, format='%(asctime)s - %(message)s')
 
 # Suppress insecure request warnings
