@@ -1,5 +1,4 @@
 FILE_PATH=$1
 WORKING_DIRECTORY=$2
-
-sleep 10
+sleep 1
 python3 /script2.py "$FILE_PATH" "$WORKING_DIRECTORY"
